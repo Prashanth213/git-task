@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 1px solid black;
+            height: 1030px;
+            background-color: whitesmoke;
+            
+            
+        }
+        .main{
+            border: 1px solid black;
+            height: 1010px;
+            width: 600px;
+           background-color: rgba(182, 149, 165, 0.363);
+        }
+        p {
+            border: 1px solid black;
+            width: 400px;
+            display: inline-block;
+            height: 30px;
+           margin-top: -9px;
+           
+        }
+        .para {
+            display: none;
+            position: absolute;
+            left: 700px;
+            top: 76px;
+            
+            
+        }
+        input[type=radio]+p {
+            color: #ccc;
+            font-style: italic;
+        }
+        input[type=radio]:checked + p {
+            color: rgb(3, 3, 3);
+            background-color: rgb(91, 167, 155);
+            font-style: normal;
+        }
+        input[type=radio]{
+            height: 15px;
+            width: 20px;
+            
+        }
+        .in1:checked ~ .para {
+            display: block;
+            background-color: rgb(109, 212, 161);
+            font-style: normal;
+            transform: none;
+        }
+        .in2:checked ~ .para {
+            display: block;
+            background-color:   rgb(109, 212, 161);
+            font-style: normal;
+            transform: rotate(10deg);
+
+        }
+        .in3:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform: rotate(45deg);;
+
+        }
+        .in4:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform: rotatex(45deg);
+
+        }
+        .in5:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform: rotatex(100deg);
+
+        }
+        .in6:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform: rotatey(50deg);
+
+        }
+        .in7:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform: rotatey(90deg);
+
+        }
+        .in8:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform:  skew(20deg,20deg);
+
+        }
+        .in9:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform:  skew(30deg,30deg);
+
+        }
+        .in10:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform:  skewx(40deg);
+
+        }
+        .in11:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform:  skewx(50deg);
+
+        }
+        .in12:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform:  skewy(40deg);
+
+        }
+        .in13:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform:  skewy(50deg);
+
+        }
+        .in14:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform:  translate(20px,10px);
+
+        }
+        .in15:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform:  translate(20px,20px);
+
+        }
+        .in16:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform:  scale(2,1);
+
+        }
+        .in17:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform:  scale(2,2);
+            
+
+        }
+        .in18:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform:  matrix(0.866,0.7,-0.8,0.866,0,0);
+
+        }
+        .in19:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform:  matrix(0.586,0.8,-0.8,0.586,0,0);
+
+        }
+        .in20:checked ~ .para {
+            display: block;
+            background-color:  rgb(109, 212, 161);
+            font-style: normal;
+            transform:  matrix(0.586,0.8,-0.8,0.586,0,0,30);
+
+        }
+        
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <form>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in1">
+                <p>Transform:none;</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in2">
+                <p>transform: rotate(10deg);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in3">
+                <p>transform: rotate(45deg);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in4">
+                <p>transform: rotatex(45deg);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in5">
+                <p>transform: rotatex(100deg);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in6">
+                <p>transform: rotatey(50deg);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in7">
+                <p>rotatex(90deg);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in8">
+                <p>transform: skew(20deg,20deg);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in9">
+                <p>transform: skew(30deg,30deg);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in10">
+                <p>transform: skewx(40deg);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in11">
+                <p>transform: skewx(50deg);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in12">
+                <p>transform: skewy(40deg);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in13">
+                <p>transform: skewy(50deg);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in14">
+                <p>translate(20px,10px);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in15">
+                <p>transform: translate(20px,10px);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in16">
+                <p>transform: scale(2,1);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in17">
+                <p>transform: scale(2,2);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in18">
+                <p>transform: matrix(0.866,0.7,-0.8,0.866,0,0);</p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in19">
+                <p>transform: matrix(0.586,0.8,-0.8,0.586,0,0,);
+                </p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+                <input type="radio" name="none" id="none" checked="checked" value="none" class="in20">
+                <p>transform:  matrix(0.586,0.8,-0.8,0.586,0,0,30);
+                </p>
+                <div class="para">See <br>what <br>different<br> transform <br>values <br>does with <br>this blue <br> DIV <br> element.</div><br>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
